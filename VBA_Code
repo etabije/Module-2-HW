@@ -1,0 +1,42 @@
+Sub Multi_stock()
+
+'Declare Variables
+
+Dim i As Long
+Dim j As Integer
+Dim quartly_change As Double
+Dim percentage_change As Double
+Dim stock_volume As Double
+
+
+Range("I1").Value = "Ticker"
+Range("j1").Value = "Quarterly Change"
+Range("k1").Value = "Percent Change"
+Range("l1").Value = "Total Stock Volume"
+Range("p1").Value = "Ticker"
+Range("q1").Value = "Value"
+Range("O2").Value = "Greatest % increase"
+Range("O3").Value = "Greatest % decrease"
+Range("O4").Value = "Greatest Total Volume"
+
+'Calculate Ticker Symbols
+ 
+ j = 0
+ stock_volume = 0
+ 
+ For i = 2 To 93001
+    If Cells(i + 1, 1).Value <> Cells(i, 1).Value Then
+        stock_volume = Cells(i, 7).Value + stock_volume
+        
+        Range("I" & 2 + j).Value = Cells(i, 1).Value
+        
+        
+j = j + 1
+
+' Calculate quarterly change
+ 
+' Calculate Total Stock Volume
+'c-f/c percent change
+End If
+Next i
+End Sub
